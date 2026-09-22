@@ -46,12 +46,17 @@ npm install
 cd ..
 
 # 4. Criar arquivo .env
-@"
-OPENAI_API_KEY=sk-sua_chave_openai
+"OPENAI_API_KEY=sua_chave_openai_aqui
 OPENAI_MODEL=gpt-5.4-mini
 OPENAI_MAX_OUTPUT_TOKENS=5000
-SHEETS_URL=https://docs.google.com/spreadsheets/d/ID_DA_PLANILHA/edit?gid=0#gid=0
-"@ | Out-File -FilePath .env -Encoding utf8
+
+# Google Sheets usado pelo tracking final.
+# A planilha precisa estar publica e com permissao de edicao para qualquer pessoa com o link.
+SHEETS_URL=https://docs.google.com/spreadsheets/d/SEU_ID_DA_PLANILHA/edit?gid=0#gid=0
+
+# Opcional: use apenas se o Chrome/Edge nao for encontrado automaticamente.
+CHROME_PATH=
+"
 ```
 
 A planilha do Google Sheets precisa estar com permissão de **edição para qualquer pessoa com o link**.
